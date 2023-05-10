@@ -50,6 +50,8 @@ public class BootstrapData implements CommandLineRunner{
 		//adding associations between saved authors and books
 		auth.getBooks().add(book);
 		auth2.getBooks().add(book2);
+		book.getAuthors().add(auth);
+		book2.getAuthors().add(auth2);
 		
 		Publisher publ = new Publisher();
 		publ.setPublisherName("Publisher Name");
